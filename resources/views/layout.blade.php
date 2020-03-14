@@ -520,11 +520,11 @@
 
 
 
-<script src="{{asset('js/jquery.js')}}"></script>
-<script src="{{asset('js/bootstrap.min.js')}}"></script>
-<script src="{{asset('js/jquery.scrollUp.min.js')}}"></script>
-<script src="{{asset('js/price-range.js')}}"></script>
-<script src="{{asset('js/jquery.prettyPhoto.js')}}"></script>
-<script src="{{asset('js/main.js')}}"></script>
+<script src="{{asset('frontend/js/jquery.js')}}"></script>
+<script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('frontend/js/jquery.scrollUp.min.js')}}"></script>
+<script src="{{asset('frontend/js/price-range.js')}}"></script>
+<script src="{{asset('frontend/js/jquery.prettyPhoto.js')}}"></script>
+<script src="{{asset('frontend/js/main.js')}}"></script>
 </body>
 </html>
