@@ -13,6 +13,8 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+        DB::beginTransaction();
+        try {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
@@ -22,6 +24,11 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+        DB::commit();
+    } catch (PDOException $e) {
+DB::rollBack();
+$this->down();
+}
     }
 
     /**

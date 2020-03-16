@@ -13,6 +13,8 @@ class CreateFailedJobsTable extends Migration
      */
     public function up()
     {
+        DB::beginTransaction();
+        try {
         Schema::create('failed_jobs', function (Blueprint $table) {
             $table->id();
             $table->text('connection');
@@ -21,6 +23,11 @@ class CreateFailedJobsTable extends Migration
             $table->longText('exception');
             $table->timestamp('failed_at')->useCurrent();
         });
+        DB::commit();
+    } catch (PDOException $e) {
+DB::rollBack();
+$this->down();
+}
     }
 
     /**
