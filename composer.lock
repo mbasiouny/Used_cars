@@ -452,12 +452,15 @@
                 "crossdomain",
                 "laravel"
             ],
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://github.com/barryvdh",
                     "type": "github"
                 }
             ],
+=======
+>>>>>>> origin/master
             "time": "2020-03-11T21:05:07+00:00"
         },
         {
@@ -739,6 +742,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v7.1.2",
             "source": {
                 "type": "git",
@@ -749,6 +753,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/951e10fbfed2a2d547c3fc33853125b4a619e01a",
                 "reference": "951e10fbfed2a2d547c3fc33853125b4a619e01a",
+=======
+            "version": "v7.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "59b97d2868ff42d11626e63c6773b41146b3eb9c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/59b97d2868ff42d11626e63c6773b41146b3eb9c",
+                "reference": "59b97d2868ff42d11626e63c6773b41146b3eb9c",
+>>>>>>> origin/master
                 "shasum": ""
             },
             "require": {
@@ -836,7 +852,11 @@
                 "ext-memcached": "Required to use the memcache cache driver.",
                 "ext-pcntl": "Required to use all features of the queue worker.",
                 "ext-posix": "Required to use all features of the queue worker.",
+<<<<<<< HEAD
                 "ext-redis": "Required to use the Redis cache and queue drivers (^4.0|^5.0).",
+=======
+                "ext-redis": "Required to use the Redis cache and queue drivers.",
+>>>>>>> origin/master
                 "filp/whoops": "Required for friendly error pages in development (^2.4).",
                 "fzaninotto/faker": "Required to use the eloquent factory builder (^1.9.1).",
                 "guzzlehttp/guzzle": "Required to use the HTTP Client, Mailgun mail driver and the ping methods on schedules (^6.3.1|^7.0).",
@@ -886,7 +906,11 @@
                 "framework",
                 "laravel"
             ],
+<<<<<<< HEAD
             "time": "2020-03-13T13:52:44+00:00"
+=======
+            "time": "2020-03-10T14:07:01+00:00"
+>>>>>>> origin/master
         },
         {
             "name": "laravel/tinker",
@@ -1024,6 +1048,7 @@
                 "md",
                 "parser"
             ],
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://github.com/colinodell",
@@ -1038,6 +1063,8 @@
                     "type": "tidelift"
                 }
             ],
+=======
+>>>>>>> origin/master
             "time": "2020-02-28T18:53:50+00:00"
         },
         {
@@ -1122,6 +1149,7 @@
                 "sftp",
                 "storage"
             ],
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://github.com/frankdejonge",
@@ -1132,6 +1160,8 @@
                     "type": "tidelift"
                 }
             ],
+=======
+>>>>>>> origin/master
             "time": "2020-03-08T18:53:20+00:00"
         },
         {
@@ -1283,6 +1313,7 @@
                 "datetime",
                 "time"
             ],
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://opencollective.com/Carbon",
@@ -1293,6 +1324,8 @@
                     "type": "tidelift"
                 }
             ],
+=======
+>>>>>>> origin/master
             "time": "2020-03-01T11:11:58+00:00"
         },
         {
@@ -2085,6 +2118,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2099,6 +2133,8 @@
                     "type": "tidelift"
                 }
             ],
+=======
+>>>>>>> origin/master
             "time": "2020-02-24T15:05:31+00:00"
         },
         {
@@ -2207,6 +2243,7 @@
             ],
             "description": "Symfony ErrorHandler Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2221,6 +2258,8 @@
                     "type": "tidelift"
                 }
             ],
+=======
+>>>>>>> origin/master
             "time": "2020-02-29T10:07:09+00:00"
         },
         {
@@ -2291,6 +2330,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2305,6 +2345,8 @@
                     "type": "tidelift"
                 }
             ],
+=======
+>>>>>>> origin/master
             "time": "2020-02-22T20:09:08+00:00"
         },
         {
@@ -2412,6 +2454,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2426,6 +2469,8 @@
                     "type": "tidelift"
                 }
             ],
+=======
+>>>>>>> origin/master
             "time": "2020-02-14T07:43:07+00:00"
         },
         {
@@ -2577,6 +2622,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2591,6 +2637,8 @@
                     "type": "tidelift"
                 }
             ],
+=======
+>>>>>>> origin/master
             "time": "2020-02-29T10:41:30+00:00"
         },
         {
@@ -2653,6 +2701,7 @@
                 "mime",
                 "mime-type"
             ],
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2667,6 +2716,8 @@
                     "type": "tidelift"
                 }
             ],
+=======
+>>>>>>> origin/master
             "time": "2020-02-04T09:41:09+00:00"
         },
         {
@@ -3143,6 +3194,7 @@
                 "uri",
                 "url"
             ],
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3157,6 +3209,8 @@
                     "type": "tidelift"
                 }
             ],
+=======
+>>>>>>> origin/master
             "time": "2020-02-25T14:24:11+00:00"
         },
         {
@@ -3292,6 +3346,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3306,6 +3361,8 @@
                     "type": "tidelift"
                 }
             ],
+=======
+>>>>>>> origin/master
             "time": "2020-02-04T07:41:34+00:00"
         },
         {
@@ -3491,6 +3548,7 @@
         },
         {
             "name": "vlucas/phpdotenv",
+<<<<<<< HEAD
             "version": "v4.1.2",
             "source": {
                 "type": "git",
@@ -3501,6 +3559,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/939dfda2d7267ac8fc53ac3d642b5de357554c39",
                 "reference": "939dfda2d7267ac8fc53ac3d642b5de357554c39",
+=======
+            "version": "v4.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "32bd5ca5a4170f88e27073353013d210a3354ae9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/32bd5ca5a4170f88e27073353013d210a3354ae9",
+                "reference": "32bd5ca5a4170f88e27073353013d210a3354ae9",
+>>>>>>> origin/master
                 "shasum": ""
             },
             "require": {
@@ -3549,6 +3619,7 @@
                 "env",
                 "environment"
             ],
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://tidelift.com/funding/github/packagist/vlucas/phpdotenv",
@@ -3569,6 +3640,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/voku/portable-ascii/zipball/240e93829a5f985fab0984a6e55ae5e26b78a334",
                 "reference": "240e93829a5f985fab0984a6e55ae5e26b78a334",
+=======
+            "time": "2020-03-01T23:56:01+00:00"
+        },
+        {
+            "name": "voku/portable-ascii",
+            "version": "1.4.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/voku/portable-ascii.git",
+                "reference": "9fd2b224c71448b5f84aef9d499a1428d79776a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/9fd2b224c71448b5f84aef9d499a1428d79776a2",
+                "reference": "9fd2b224c71448b5f84aef9d499a1428d79776a2",
+>>>>>>> origin/master
                 "shasum": ""
             },
             "require": {
@@ -3604,6 +3691,7 @@
                 "clean",
                 "php"
             ],
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://www.paypal.me/moelleken",
@@ -3623,6 +3711,9 @@
                 }
             ],
             "time": "2020-03-13T01:23:26+00:00"
+=======
+            "time": "2020-03-06T02:47:42+00:00"
+>>>>>>> origin/master
         }
     ],
     "packages-dev": [
@@ -3734,12 +3825,15 @@
                 "flare",
                 "reporting"
             ],
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://www.patreon.com/spatie",
                     "type": "patreon"
                 }
             ],
+=======
+>>>>>>> origin/master
             "time": "2020-03-02T15:52:04+00:00"
         },
         {
@@ -4197,6 +4291,7 @@
                 "php",
                 "symfony"
             ],
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=66BYDWAT92N6L",
@@ -4211,6 +4306,8 @@
                     "type": "patreon"
                 }
             ],
+=======
+>>>>>>> origin/master
             "time": "2020-03-07T12:46:00+00:00"
         },
         {
@@ -4931,12 +5028,15 @@
                 "highlight.php",
                 "syntax"
             ],
+<<<<<<< HEAD
             "funding": [
                 {
                     "url": "https://github.com/allejo",
                     "type": "github"
                 }
             ],
+=======
+>>>>>>> origin/master
             "time": "2020-03-02T05:59:21+00:00"
         },
         {
@@ -5651,6 +5751,10 @@
     "platform": {
         "php": "^7.2.5"
     },
+<<<<<<< HEAD
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
+=======
+    "platform-dev": []
+>>>>>>> origin/master
 }

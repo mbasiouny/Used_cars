@@ -21,5 +21,8 @@ Route::get('/','HomeController@index');
 //backend-------------------
 Route::get('/admin','AdminController@index');
 Route::get('/dashboard','AdminController@show_dashboard');
+<<<<<<< HEAD
 Route::get('add','AdminController@add_car');
 Route::post('add','AdminController@add_car');
+=======
+>>>>>>> origin/master

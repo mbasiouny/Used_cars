@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\Add;
+=======
+>>>>>>> origin/master
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
     //
+<<<<<<< HEAD
     public function index()
     {
         return view('admin_login');
@@ -33,4 +37,12 @@ class AdminController extends Controller
         return view('admin_add');
 
     }
+=======
+    public function index(){
+        return view('admin_login');
+    }
+    public function show_dashboard(){
+        return view('admin.dashboard');
+    }
+>>>>>>> origin/master
 }
