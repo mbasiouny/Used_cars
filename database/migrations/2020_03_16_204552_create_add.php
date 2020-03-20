@@ -19,9 +19,9 @@ class CreateAdd extends Migration
             $table->increments('id');
             $table->string('email');
             $table->string('model');
-            $table->float('years');
+            $table->string('years');
             $table->string('description');
-            $table->float('price');
+            $table->string('price');
             $table->string('photo');
             $table->timestamps();
         });

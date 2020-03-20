@@ -11,19 +11,13 @@ class CreatePasswordResetsTable extends Migration
      *
      * @return void
      */
-    public function up(){
-        DB::beginTransaction();
-        try {
+    public function up()
+    {
         Schema::create('password_resets', function (Blueprint $table) {
             $table->string('email')->index();
             $table->string('token');
             $table->timestamp('created_at')->nullable();
         });
-        DB::commit();
-    } catch (PDOException $e) {
-DB::rollBack();
-$this->down();
-}
     }
 
     /**

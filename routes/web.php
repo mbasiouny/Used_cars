@@ -19,7 +19,18 @@ Route::get('/','HomeController@index');
 
 
 //backend-------------------
-Route::get('/admin','AdminController@index');
-Route::get('/dashboard','AdminController@show_dashboard');
-Route::get('add','AdminController@add_car');
-Route::post('add','AdminController@add_car');
+
+
+Auth::routes();
+
+// put all route here for routes
+Route::group(['middleware' => ['auth']], function () {
+    //defuallt
+    Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::get('/admin','AdminController@index');
+    Route::get('/dash','AdminController@show_dashboard')->name('dash');
+    Route::get('add','AdminController@add_car');
+    Route::post('add','AdminController@add_car');
+
+});
