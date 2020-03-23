@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | E-Shopper</title>
+    <title>Home | E-USED CARS</title>
     <link href="{{('frontend/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{('frontend/css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{('frontend/css/prettyPhoto.css')}}" rel="stylesheet">
@@ -18,10 +18,10 @@
     <script src="{{('frontend/js/respond.min.js')}}"></script>
     <![endif]-->
     <link rel="shortcut icon" href="{{URL::to('frontend/images/ico/favicon.ico')}}">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{URL::to('frontend/images/ico/apple-touch-icon-144-precomposed.png')}}">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{URL::to('frontend/images/ico/apple-touch-icon-114-precomposed.png')}}">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{URL::to('frontend/images/ico/apple-touch-icon-72-precomposed.png')}}">
-    <link rel="apple-touch-icon-precomposed" href="{{URL::to('frontend/images/ico/apple-touch-icon-57-precomposed.png')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{URL::to('frontend/images/ico/apple-touch-icon-144-precomposed.jpg')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{URL::to('frontend/images/ico/apple-touch-icon-114-precomposed.jpg')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{URL::to('frontend/images/ico/apple-touch-icon-72-precomposed.jpg')}}">
+    <link rel="apple-touch-icon-precomposed" href="{{URL::to('frontend/images/ico/apple-touch-icon-57-precomposed.jpg')}}">
 </head><!--/head-->
 
 <body>
@@ -57,7 +57,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="index.html"><img src="{{asset('frontend/images/home/logo.png')}}" alt="" /></a>
+                        <a href="index.html"><img src="{{asset('frontend/images/home/logo.jpg')}}" alt="" /></a>
                     </div>
                     <div class="btn-group pull-right">
                         <div class="btn-group">
@@ -90,7 +90,7 @@
                             <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                             <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                             <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                            <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                            <li><a href="{{route('admin.logout')}}"><i class="fa fa-lock"></i> Logout</a></li>
                         </ul>
                     </div>
                 </div>
@@ -157,39 +157,39 @@
                     <div class="carousel-inner">
                         <div class="item active">
                             <div class="col-sm-6">
-                                <h1><span>E</span>-SHOPPER</h1>
-                                <h2>Free E-Commerce Template</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <h1><span>E</span>-USED CARS</h1>
+                                <h2>From £493.77 per month *</h2>
+                                <p>**SATELLITE NAVIGATION** HERE AT PSD WE ARE DELIGHTED TO OFFER THIS **STUNNING** VOLVO XC90 FINISHED IN THE STRIKING BLUE ACCOMPANIED WITH SATELLITE NAVIGATION, BLUETOOTH WITH MEDIA PLAY BACK, STANDOUT UPGRADED ALLOY WHEELS, REAR PRIVACY GLASS PLUS MUCH MUCH MORE...</p>
                                 <button type="button" class="btn btn-default get">Get it now</button>
                             </div>
                             <div class="col-sm-6">
                                 <img src="{{asset('frontend/images/home/girl1.jpg')}}" class="girl img-responsive" alt="" />
-                                <img src="{{asset('frontend/images/home/pricing.png')}}"  class="pricing" alt="" />
+
                             </div>
                         </div>
                         <div class="item">
                             <div class="col-sm-6">
-                                <h1><span>E</span>-SHOPPER</h1>
-                                <h2>100% Responsive Design</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <h1><span>E</span>-USED CARS</h1>
+                                <h2>From £431.42 per month *</h2>
+                                <p>**NOT TO BE MISSED**BMW-THE ULTIMATE DRIVING MACHINE** PSD ARE VERY EXCITED TO OFFER THIS ONE OF A KIND BMW 5 SERIES FINISHED IN THE VERY RARE RHODONITE METALLIC SILVER... </p>
                                 <button type="button" class="btn btn-default get">Get it now</button>
                             </div>
                             <div class="col-sm-6">
-                                <img src="{{asset('frontend/images/home/girl2.jpg')}}" class="girl img-responsive" alt="" />
-                                <img src="{{asset('frontend/images/home/pricing.png')}}"  class="pricing" alt="" />
+                                <img src="{{asset('frontend/images/home/girl3.jpg')}}" class="girl img-responsive" alt="" />
+
                             </div>
                         </div>
 
                         <div class="item">
                             <div class="col-sm-6">
-                                <h1><span>E</span>-SHOPPER</h1>
-                                <h2>Free Ecommerce Template</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <h1><span>E</span>-USED CARS</h1>
+                                <h2>From £532.04 per month *</h2>
+                                <p>STUNNING CAR IN EXCELLENT CONDITION WITH ALL THE EXTRA'S, REAR ENTERTAINMENT, SAT NAV, HEATED FRONT AND REAR SEATS, 5 DAY DRIVE AWAY INSURANCE AVAILABLE, PART EXCHANGE WELCOME. FANTASTIC FINANCE PACKAGES AVAILABLE...</p>
                                 <button type="button" class="btn btn-default get">Get it now</button>
                             </div>
                             <div class="col-sm-6">
-                                <img src="{{asset('frontend/images/home/girl3.jpg')}}" class="girl img-responsive" alt="" />
-                                <img src="{{asset('frontend/images/home/pricing.png')}}" class="pricing" alt="" />
+                                <img src="{{asset('frontend/images/home/girl2.jpg')}}" class="girl img-responsive" alt="" />
+
                             </div>
                         </div>
 
@@ -218,20 +218,21 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+                                    <a data-toggle="collapse" data-parent="#accordian" href="#Hatchback">
                                         <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                        Sportswear
+                                        Hatchback
                                     </a>
                                 </h4>
                             </div>
-                            <div id="sportswear" class="panel-collapse collapse">
+                            <div id="Hatchback" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <ul>
-                                        <li><a href="#">Nike </a></li>
-                                        <li><a href="#">Under Armour </a></li>
-                                        <li><a href="#">Adidas </a></li>
-                                        <li><a href="#">Puma</a></li>
-                                        <li><a href="#">ASICS </a></li>
+                                      <li><a href="#">Sports Car</a></li>
+                                      <li><a href="#">Diesel</a></li>
+                                      <li><a href="#">Crossover</a></li>
+                                      <li><a href="#">Luxury Car</a></li>
+                                      <li><a href="#">Hybrid/Electric</a></li>
+                                      <li><a href="#">Certified Pre-Owned</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -241,23 +242,20 @@
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-parent="#accordian" href="#mens">
                                         <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                        Mens
+                                        Cars
                                     </a>
                                 </h4>
                             </div>
                             <div id="mens" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <ul>
-                                        <li><a href="#">Fendi</a></li>
-                                        <li><a href="#">Guess</a></li>
-                                        <li><a href="#">Valentino</a></li>
-                                        <li><a href="#">Dior</a></li>
-                                        <li><a href="#">Versace</a></li>
-                                        <li><a href="#">Armani</a></li>
-                                        <li><a href="#">Prada</a></li>
-                                        <li><a href="#">Dolce and Gabbana</a></li>
-                                        <li><a href="#">Chanel</a></li>
-                                        <li><a href="#">Gucci</a></li>
+                                        <li><a href="#">Sports Car</a></li>
+                                        <li><a href="#">Diesel</a></li>
+                                        <li><a href="#">Crossover</a></li>
+                                        <li><a href="#">Luxury Car</a></li>
+                                        <li><a href="#">Hybrid/Electric</a></li>
+                                        <li><a href="#">Certified Pre-Owned</a></li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -268,55 +266,56 @@
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-parent="#accordian" href="#womens">
                                         <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                        Womens
+                                        Convertible
                                     </a>
                                 </h4>
                             </div>
                             <div id="womens" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <ul>
-                                        <li><a href="#">Fendi</a></li>
-                                        <li><a href="#">Guess</a></li>
-                                        <li><a href="#">Valentino</a></li>
-                                        <li><a href="#">Dior</a></li>
-                                        <li><a href="#">Versace</a></li>
+                                      <li><a href="#">Sports Car</a></li>
+                                      <li><a href="#">Diesel</a></li>
+                                      <li><a href="#">Crossover</a></li>
+                                      <li><a href="#">Luxury Car</a></li>
+                                      <li><a href="#">Hybrid/Electric</a></li>
+                                      <li><a href="#">Certified Pre-Owned</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Kids</a></h4>
+                                <h4 class="panel-title"><a href="#">MERCEDS</a></h4>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Fashion</a></h4>
+                                <h4 class="panel-title"><a href="#">VOLVO</a></h4>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Households</a></h4>
+                                <h4 class="panel-title"><a href="#">AUDI</a></h4>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Interiors</a></h4>
+                                <h4 class="panel-title"><a href="#">JAGUAR</a></h4>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Clothing</a></h4>
+                                <h4 class="panel-title"><a href="#">MAZDA</a></h4>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Bags</a></h4>
+                                <h4 class="panel-title"><a href="#">RENAULT</a></h4>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Shoes</a></h4>
+                                <h4 class="panel-title"><a href="#">TOYOTA</a></h4>
                             </div>
                         </div>
                     </div><!--/category-products-->
@@ -325,13 +324,13 @@
                         <h2>Brands</h2>
                         <div class="brands-name">
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#"> <span class="pull-right">(50)</span>Acne</a></li>
-                                <li><a href="#"> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-                                <li><a href="#"> <span class="pull-right">(27)</span>Albiro</a></li>
-                                <li><a href="#"> <span class="pull-right">(32)</span>Ronhill</a></li>
-                                <li><a href="#"> <span class="pull-right">(5)</span>Oddmolly</a></li>
-                                <li><a href="#"> <span class="pull-right">(9)</span>Boudestijn</a></li>
-                                <li><a href="#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
+                                <li><a href="#merced"> <span class="pull-right">(50)</span>MERCEDS</a></li>
+                                <li><a href="#VOLVO"> <span class="pull-right">(56)</span>VOLVO</a></li>
+                                <li><a href="#AUDI"> <span class="pull-right">(27)</span>AUDI</a></li>
+                                <li><a href="#RENAULT"> <span class="pull-right">(32)</span>RENAULT</a></li>
+                                <li><a href="#JAGUAR"> <span class="pull-right">(5)</span>JAGUAR</a></li>
+                                <li><a href="#MAZDA"> <span class="pull-right">(9)</span>MAZDA</a></li>
+
                             </ul>
                         </div>
                     </div><!--/brands_products-->
@@ -345,7 +344,7 @@
                     </div><!--/price-range-->
 
                     <div class="shipping text-center"><!--shipping-->
-                        <img src="{{asset('frontend/images/home/shipping.jpg')}}" alt="" />
+                        <h6>ADS HERE</h6>
                     </div><!--/shipping-->
 
                 </div>
@@ -366,8 +365,9 @@
             <div class="row">
                 <div class="col-sm-2">
                     <div class="companyinfo">
-                        <h2><span>e</span>-shopper</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+                        <h2><span>e</span>-USED CARS</h2>
+                        <p>OVER 100 VEHICLES FOR SALE
+IN THE HEART OF ST HELENS</p>
                     </div>
                 </div>
                 <div class="col-sm-7">
@@ -375,7 +375,7 @@
                         <div class="video-gallery text-center">
                             <a href="#">
                                 <div class="iframe-img">
-                                    <img src="{{asset('frontend/images/home/iframe1.png')}}" alt="" />
+                                    <img src="{{asset('frontend/images/home/iframe1.jpg')}}" alt="" />
                                 </div>
                                 <div class="overlay-icon">
                                     <i class="fa fa-play-circle-o"></i>
@@ -390,7 +390,7 @@
                         <div class="video-gallery text-center">
                             <a href="#">
                                 <div class="iframe-img">
-                                    <img src="{{asset('frontend/images/home/iframe2.png')}}" alt="" />
+                                    <img src="{{asset('frontend/images/home/iframe2.jpg')}}" alt="" />
                                 </div>
                                 <div class="overlay-icon">
                                     <i class="fa fa-play-circle-o"></i>
@@ -405,7 +405,7 @@
                         <div class="video-gallery text-center">
                             <a href="#">
                                 <div class="iframe-img">
-                                    <img src="{{asset('frontend/images/home/iframe3.png')}}" alt="" />
+                                    <img src="{{asset('frontend/images/home/iframe3.jpg')}}" alt="" />
                                 </div>
                                 <div class="overlay-icon">
                                     <i class="fa fa-play-circle-o"></i>
@@ -420,7 +420,7 @@
                         <div class="video-gallery text-center">
                             <a href="#">
                                 <div class="iframe-img">
-                                    <img src="{{asset('frontend/images/home/iframe4.png')}}" alt="" />
+                                    <img src="{{asset('frontend/images/home/iframe4.jpg')}}" alt="" />
                                 </div>
                                 <div class="overlay-icon">
                                     <i class="fa fa-play-circle-o"></i>
@@ -433,7 +433,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="address">
-                        <img src="{{asset('frontend/images/home/map.png')}}" alt="" />
+                        <img src="{{asset('frontend/images/home/map.jpg')}}" alt="" />
                         <p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
                     </div>
                 </div>
@@ -482,7 +482,7 @@
                 </div>
                 <div class="col-sm-2">
                     <div class="single-widget">
-                        <h2>About Shopper</h2>
+                        <h2>About USED CARS</h2>
                         <ul class="nav nav-pills nav-stacked">
                             <li><a href="#">Company Information</a></li>
                             <li><a href="#">Careers</a></li>
@@ -494,7 +494,7 @@
                 </div>
                 <div class="col-sm-3 col-sm-offset-1">
                     <div class="single-widget">
-                        <h2>About Shopper</h2>
+                        <h2>About USED CARS</h2>
                         <form action="#" class="searchform">
                             <input type="text" placeholder="Your email address" />
                             <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
@@ -510,8 +510,8 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
-                <p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+                <p class="pull-left">Copyright © 2020 E-USED CARS Inc. All rights reserved.</p>
+
             </div>
         </div>
     </div>

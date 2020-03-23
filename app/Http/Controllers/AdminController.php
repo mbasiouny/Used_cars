@@ -14,7 +14,11 @@ class AdminController extends Controller
 
     public function show_dashboard()
     {
-        return view('admin.dashboard');
+      if(\Auth::check()){
+        if(\Auth::user()->role==0)
+          return view('admin.dashboard');
+      }
+
     }
 
     public function add_car(Request $request )

@@ -15,18 +15,21 @@ class Authenticate extends Middleware
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
-            
-            if(\Auth::check())
-             {
-                 // role 0 for admin
-                if(\Auth::user()->role==0){
-                    return route('dash');
-                }
-                // role 1 for user
-                else{
-                    return route('home');
-                }
-             }
+          return route('get.login');
+          // return \Auth::user()->role;
+          //   if(\Auth::check())
+          //    {
+          //        // role 0 for admin
+          //       if(\Auth::user()->role==0){
+          //
+          //             return \Auth::user()->role;
+          //       }
+          //       // role 1 for user
+          //       else{
+          //         return \Auth::user()->role;
+          //           return route('welcomePage');
+          //       }
+          //    }
         }
     }
 }

@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // front end ------------------
-Route::get('/','HomeController@index');
 
 
 
@@ -21,15 +20,30 @@ Route::get('/','HomeController@index');
 //backend-------------------
 
 
-Auth::routes();
+// Auth::routes();
 
 // put all route here for routes
+Route::get('/login','Auth\LoginController@getLogin')->name('get.login');
+Route::post('/login','Auth\LoginController@postLogin')->name('login');
+// still under Editing
+Route::get('/register','Auth\RegisterController@getRegister')->name('get.register');
+Route::post('/register','Auth\RegisterController@register')->name('register');
+//
 Route::group(['middleware' => ['auth']], function () {
-    //defuallt
-    Route::get('/home', 'HomeController@index')->name('home');
+    //Route for run the home page for the first time
+    // Route::get('/home','HomeController@index');
+    //defualt Route when route
+    Route::get('/home', 'HomeController@index')->name('welcomePage');
+    // route logout
+    Route::get('/logout','SuperAdminController@logout')->name('admin.logout');
+    Route::get('/',function(){
+      return redirect('/home');
+    });
+    //End logout
+    Route::get('/admin','AdminController@show_dashboard')->name('dashAdmin');
 
-    Route::get('/admin','AdminController@index');
-    Route::get('/dash','AdminController@show_dashboard')->name('dash');
+
+
     Route::get('add','AdminController@add_car');
     Route::post('add','AdminController@add_car');
 
