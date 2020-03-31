@@ -18,6 +18,7 @@ class CreateCategoryTable extends Migration
             $table->string('category_name');
             $table->string('category_description');
             $table->integer('publication_status');
+            
             $table->timestamps();
         });
     }
