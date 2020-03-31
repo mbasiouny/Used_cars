@@ -1,4 +1,5 @@
 <?php
+//use RealRashid\SweetAlert\Facades\Alert;
 
 use Illuminate\Support\Facades\Route;
 
@@ -40,11 +41,16 @@ Route::group(['middleware' => ['auth']], function () {
       return redirect('/home');
     });
     //End logout
+    //route dashboard
     Route::get('/admin','AdminController@show_dashboard')->name('dashAdmin');
-
+    Route::get('/add_category','CategoryController@index');
+    Route::get('/all_categories','CategoryController@all_categories');
+    Route::post('/save_categories','CategoryController@save_categories');
+    //end dashboard
 
 
     Route::get('add','AdminController@add_car');
     Route::post('add','AdminController@add_car');
+
 
 });

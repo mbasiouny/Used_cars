@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 use App\Add;
 use Illuminate\Http\Request;
+use DB;
+//use App\Http\Request;
+use Session;
+use Illuminate\Support\Facades\Redirect;
+session_start();
 
 class AdminController extends Controller
 {
