@@ -57,31 +57,35 @@
                 </div>
                 <h2>Add Your Car</h2>
                 <form class="form-horizontal" action="add" method="POST">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     {{csrf_field()}}
                     <fieldset>
 
-                        <div class="input-prepend" title="Username">
-                            <span class="add-on"><i class="halflings-icon user"></i></span>
-                            <input class="input-large span10" name="email"  type="email" placeholder="type E-mail"/>
-                        </div>
-
                         <div class="input-prepend" title="Car model">
                             <span class="add-on"><i class="halflings-icon user"></i></span>
-                            <input class="input-large span10" name="model"  type="text" placeholder="type car model"/>
+                            <input class="input-large span10" name="model"value="{{Request::old('model')}}"  type="text" placeholder="type car model"/>
                         </div>
                         <div class="input-prepend" title="Used for">
                             <span class="add-on"><i class="halflings-icon user"></i></span>
-                            <input class="input-large span10" name="years"  type="text" placeholder="type used for how many years"/>
-                        </div>
-
-                        <div class="input-prepend" title="Description">
-                            <span class="add-on"><i class="halflings-icon user"></i></span>
-                            <input class="input-large span10" name="description"  type="text" placeholder="type Description"/>
+                            <input class="input-large span10" name="years"value="{{Request::old('years')}}"  type="text" placeholder="type used for how many years"/>
                         </div>
                         <div class="input-prepend" title="Price">
                             <span class="add-on"><i class="halflings-icon user"></i></span>
-                            <input class="input-large span10" name="price"  type="text" placeholder="type price"/>
+                            <input class="input-large span10" name="price" value="{{Request::old('price')}}" type="text" placeholder="type price"/>
                         </div>
+                        <div class="input-prepend" title="Description">
+                            <span class="add-on"><i class="halflings-icon user"></i></span>
+                            <input class="input-large span10" name="description" value="{{Request::old('description')}}" type="text" placeholder="type Description"/>
+                        </div>
+
                         <div class="clearfix"></div>
                         <div class="input-prepend" title="Photo">
                             <span class="add-on"><i class="halflings-icon user"></i></span>

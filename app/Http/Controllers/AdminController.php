@@ -26,19 +26,4 @@ class AdminController extends Controller
 
     }
 
-    public function add_car(Request $request )
-    {
-        if($request->isMethod('post')){
-            $newcar= new Add();
-            $newcar->email=$request->input('email');
-            $newcar->model=$request->input('model');
-            $newcar->years=$request->input('years');
-            $newcar->description=$request->input('description');
-            $newcar->price=$request->input('price');
-            $newcar->photo=$request->input('photo');
-            $newcar->save();
-        }
-        return view('admin_add');
-
-    }
 }

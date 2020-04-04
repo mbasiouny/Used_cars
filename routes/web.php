@@ -48,9 +48,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/save_categories','CategoryController@save_categories');
     //end dashboard
 
-
-    Route::get('add','AdminController@add_car');
-    Route::post('add','AdminController@add_car');
-
+//for cars//
+    Route::get('add','Cars_Controller@add_car');
+    Route::post('add','Cars_Controller@add_car');
+    Route::get('profile','Cars_Controller@user_profile');
+// cars//
 
 });
