@@ -17,12 +17,13 @@ class CreateAdd extends Migration
         try {
         Schema::create('adds', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email');
             $table->string('model');
             $table->string('years');
             $table->string('description');
             $table->string('price');
             $table->string('photo');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
         DB::commit();
