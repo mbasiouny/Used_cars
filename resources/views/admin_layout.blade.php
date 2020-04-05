@@ -363,7 +363,7 @@
 
         <noscript>
             <div class="alert alert-block span10">
-                @yield('admin_content');
+                @yield('admin_content')
 
         </div><!--/.fluid-container-->
 

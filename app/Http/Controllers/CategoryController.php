@@ -31,9 +31,11 @@ class CategoryController extends Controller
         $data['category_name']=$request->category_name;
         $data['category_description']=$request->category_description;
         $data['publication_status']=$request->publication_status;
-        
+        if($request->publication_status!=1)
+        {
+            $data['publication_status']=0;
+        }
         DB::table('category')->insert($data);
-        
         return Redirect::to('/add_category')->withSuccessMessage('Category added successfullly!!');
 
     }

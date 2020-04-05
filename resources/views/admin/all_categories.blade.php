@@ -15,14 +15,6 @@
 				</li>
 				<li><a href="{{URL::to('/all_categories')}}">All Categories</a></li>
             </ul>
-            <ul class="breadcrumb">
-				<li>
-					<i class="icon-home"></i>
-					<a href="index.html">Home</a> 
-					<i class="icon-angle-right"></i>
-				</li>
-				<li><a href="#">Tables</a></li>
-			</ul>
 
 			<div class="row-fluid sortable">		
 				<div class="box span12">
