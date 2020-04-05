@@ -46,6 +46,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/add_category','CategoryController@index');
     Route::get('/all_categories','CategoryController@all_categories');
     Route::post('/save_categories','CategoryController@save_categories');
+    //Route::get('/in_active/{category_id}','CategoryController@in_active');
+    //Route::get('/active/{category_id}','CategoryController@active');
     //end dashboard
 
 //for cars//
