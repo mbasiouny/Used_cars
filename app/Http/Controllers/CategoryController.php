@@ -45,7 +45,7 @@ class CategoryController extends Controller
         return Redirect::to('/add_category')->withSuccessMessage('Category added successfullly!!');
 
     }
-   /* public function in_active($category_id)
+    public function in_active($category_id)
     {
         DB::table('category')->where('category_id',$category_id)->update(['publication_status' => 0]);
         return Redirect::to('all_categories');
@@ -55,5 +55,4 @@ class CategoryController extends Controller
         DB::table('category')->where('category_id',$category_id)->update(['publication_status' => 1]);
         return Redirect::to('all_categories');
     }
-    */
 }
