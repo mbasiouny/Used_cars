@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 //backend-------------------
 
 
-// Auth::routes();
+Auth::routes();
 
 // put all route here for routes
 Route::get('/login','Auth\LoginController@getLogin')->name('get.login');
@@ -42,6 +42,7 @@ Route::group(['middleware' => ['auth']], function () {
     });
     //End logout
     //route dashboard
+	
     Route::get('/admin','AdminController@show_dashboard')->name('dashAdmin');
     Route::get('/add_category','CategoryController@index');
     Route::get('/all_categories','CategoryController@all_categories');
@@ -55,5 +56,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('add','Cars_Controller@add_car');
     Route::get('profile','Cars_Controller@user_profile');
 // cars//
+
+//chat
+
+
+Route::get('/chat', 'ChatController@index')->middleware('auth')->name('chat.index');
+Route::get('/chat/{id}', 'ChatController@show')->middleware('auth')->name('chat.show');
+Route::post('/chat/getChat/{id}', 'ChatController@getChat')->middleware('auth');
+Route::post('/chat/sendChat', 'ChatController@sendChat')->middleware('auth');
+
 
 });
