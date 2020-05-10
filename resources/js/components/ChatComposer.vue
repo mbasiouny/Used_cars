@@ -1,3 +1,19 @@
+
+<style scoped>
+    .panel-block {
+        flex-direction: row;
+        width: 100%;
+        border: none;
+        padding: 0;
+    }
+    input {
+        border-radius: 0;
+    }
+    .auto-width {
+        width: auto;
+    }
+</style>
+
 <template>
     <div class="panel-block field">
         <div class="control">
@@ -35,17 +51,3 @@
     }
 </script>
 
-<style scoped>
-    .panel-block {
-        flex-direction: row;
-        width: 100%;
-        border: none;
-        padding: 0;
-    }
-    input {
-        border-radius: 0;
-    }
-    .auto-width {
-        width: auto;
-    }
-</style>
