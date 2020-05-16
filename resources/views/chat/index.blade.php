@@ -12,6 +12,7 @@
                     <a href="{{ route('chat.show', $friend->id) }}" class="panel-block" style="justify-content: space-between;">
                         <div>{{ $friend->name }}</div>
                     </a>
+					
                 @empty
                     <div class="panel-block">
                         You don't have any Chats

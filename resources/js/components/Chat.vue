@@ -11,6 +11,10 @@
         border: 1px solid grey;
         max-height: 600px;
         overflow-x: auto;
+		
+		
+
+
     }
     .chat .chat-right, .chat .chat-left {
         max-width: 70%;
@@ -33,27 +37,41 @@
 
 <template>
     <div class="panel-block">
-        <div class="chat" v-if="chats.length != 0">
+		
+        <div class="chat" v-if="chats.length != 0" id = "chat-box">
             <div v-for="chat in chats" style="overflow: auto;">
                 <div class="chat-right" v-if="chat.user_id == userid">
                     {{ chat.chat }}
+
+                     <img v-if="chat.seen == '1'" width="15px" height = "15px" src="/photo/seen.png" />  
+				
                 </div>
                 <div class="chat-left" v-else>
                     {{ chat.chat }}
+					
                 </div>
+				
             </div>
+			
         </div>
+		
         <div v-else class="no-message">
             There are no messages
 			
         </div>
-        <chat-composer v-bind:userid="userid" v-bind:chats="chats" v-bind:friendid="friendid"></chat-composer>
+        <chat-composer v-bind:userid="userid" v-bind:chats="chats" v-bind:friendid="friendid" ></chat-composer>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['chats', 'userid', 'friendid']
+        props: ['chats', 'userid', 'friendid'],
+		
+	
 		
     }
+	
+
+	
+	
 </script>

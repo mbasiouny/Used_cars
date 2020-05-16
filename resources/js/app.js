@@ -32,30 +32,70 @@ Vue.component('chat-composer', require('./components/ChatComposer.vue').default)
 const app = new Vue({
     el: '#app',
 	data: {
-		chats: ''
+		chats: '',
+		timer: ''
 	},
 	
 	created() {
 		const userId = $('meta[name="userId"]').attr('content');
 		const friendId = $('meta[name="friendId"]').attr('content');
+		this.fetchChat();
 		
-		if (friendId != undefined){
-			axios.post('/chat/getChat/' + friendId).then((response) => {
-                this.chats = response.data;
+        this.timer = setInterval(this.fetchChat, 3000)
+		Echo.private('Chat.' + friendId + '.' + userId)
+					.listen('BroadcastChat', (e) => {
+						this.chats.push(e.chat);
+						
+		});
+	},
+	methods: 
+	{
+		fetchChat(){
+			const userId = $('meta[name="userId"]').attr('content');
+			const friendId = $('meta[name="friendId"]').attr('content');
+			if (friendId != undefined){
+				axios.post('/chat/getChat/' + friendId).then((response) => {
+					this.chats = response.data;
+				})
+			}
 			
-			})
-			
-			Echo.private('Chat.' + friendId + '.' + userId)
-                .listen('BroadcastChat', (e) => {
-                    this.chats.push(e.chat);
-                });
-		}
-	}
 	
+		},
+		cancelAutoUpdate () { clearInterval(this.timer) },
+		
 	
-	
+	},
+	beforeDestroy () {
+      clearInterval(this.timer)
+    }
 	
 	
 	
 	
 });
+
+
+
+$(document).ready(function(){
+    setTimeout(function(){
+       $("div.alert-info").remove();
+    }, 3000 ); // 3 secs
+
+});
+
+
+/* var scrolled = false;
+function updateScroll(){
+    if(!scrolled){
+        var element = document.getElementById("chat-box");
+        element.scrollTop = element.scrollHeight;
+    }
+}
+
+$("chat-box").on('scroll', function(){
+    scrolled=true;
+}); */
+
+
+
+

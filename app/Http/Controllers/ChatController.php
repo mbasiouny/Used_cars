@@ -17,7 +17,6 @@ class ChatController extends Controller
     public function index()
     {
         $friends = Auth::user()->friends();
-		//$usres = Auth::user()->allUsers();
 		return view('chat.index')->withFriends($friends);
 		
     }
@@ -88,15 +87,21 @@ class ChatController extends Controller
     {
         //
     }
-	
+	public function messageSeen ($id)
+	{
+		Chat::where(function ($query) use ($id){
+			$query->where('user_id', '=', $id)->where('friend_id', '=', Auth::user()->id)->where('seen' , '!=' , '1');
+		})->update (['seen' => '1']);
+	}
 	
 	public function getChat($id) {
+		$this->messageSeen ($id);
         $chats = Chat::where(function ($query) use ($id) {
             $query->where('user_id', '=', Auth::user()->id)->where('friend_id', '=', $id);
         })->orWhere(function ($query) use ($id) {
             $query->where('user_id', '=', $id)->where('friend_id', '=', Auth::user()->id);
         })->get();
-
+		
         return $chats;
     }
 	public function sendChat(Request $request) {
@@ -104,13 +109,35 @@ class ChatController extends Controller
             'user_id' => $request->user_id,
             'friend_id' => $request->friend_id,
             'chat' => $request->chat
+			
         ]);
         
         return [];
     }
 
-    
+    public function deleteChat ($id) {
+		$isDeleted = Chat::where(function ($query) use ($id) {
+            $query->where('user_id', '=', Auth::user()->id)->where('friend_id', '=', $id);
+        })->orWhere(function ($query) use ($id) {
+            $query->where('user_id', '=', $id)->where('friend_id', '=', Auth::user()->id);
+        })->delete();
+		if ($isDeleted)
+			return redirect('/chat');
+		else
+		{
+			
+			return redirect()->back()->with('message', 'Chat is Empty');
+			
+		}
+	}
 	
+	/*public function Seen(Chat $chat)
+    {
+        $chat->seen = '1';
+        $chat->save();
+
+        broadcast(new MessageSeen($chat));
+    }*/
 	
 	
 	

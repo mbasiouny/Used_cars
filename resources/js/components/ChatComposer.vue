@@ -39,15 +39,24 @@
                     var data = {
                         chat: this.chat,
                         friend_id: this.friendid,
-                        user_id: this.userid
+                        user_id: this.userid,
+						seen: ''
                     }
+					
                     this.chat = '';
+					
                     axios.post('/chat/sendChat', data).then((response) => {
+						
                         this.chats.push(data)
                     })
+					
+			
                 }
             }
+			
         }
+		
+		
     }
 </script>
 

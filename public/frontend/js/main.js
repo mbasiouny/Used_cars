@@ -28,3 +28,10 @@ $(document).ready(function(){
 		});
 	});
 });
+
+$(document).ready(function(){
+    setTimeout(function(){
+       $("div.alert-info").remove();
+    }, 5000 ); // 5 secs
+
+});

@@ -1961,6 +1961,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['chats', 'userid', 'friendid']
 });
@@ -1987,6 +1999,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['chats', 'userid', 'friendid'],
   data: function data() {
@@ -2002,7 +2030,8 @@ __webpack_require__.r(__webpack_exports__);
         var data = {
           chat: this.chat,
           friend_id: this.friendid,
-          user_id: this.userid
+          user_id: this.userid,
+          seen: ''
         };
         this.chat = '';
         axios.post('/chat/sendChat', data).then(function (response) {
@@ -43494,7 +43523,7 @@ var render = function() {
       _vm.chats.length != 0
         ? _c(
             "div",
-            { staticClass: "chat" },
+            { staticClass: "chat", attrs: { id: "chat-box" } },
             _vm._l(_vm.chats, function(chat) {
               return _c("div", { staticStyle: { overflow: "auto" } }, [
                 chat.user_id == _vm.userid
@@ -43502,14 +43531,23 @@ var render = function() {
                       _vm._v(
                         "\n                " +
                           _vm._s(chat.chat) +
-                          "\n            "
-                      )
+                          "\n\n                 "
+                      ),
+                      chat.seen == "1"
+                        ? _c("img", {
+                            attrs: {
+                              width: "15px",
+                              height: "15px",
+                              src: "/photo/seen.png"
+                            }
+                          })
+                        : _vm._e()
                     ])
                   : _c("div", { staticClass: "chat-left" }, [
                       _vm._v(
                         "\n                " +
                           _vm._s(chat.chat) +
-                          "\n            "
+                          "\n\t\n            "
                       )
                     ])
               ])
@@ -55792,24 +55830,57 @@ Vue.component('chat-composer', __webpack_require__(/*! ./components/ChatComposer
 var app = new Vue({
   el: '#app',
   data: {
-    chats: ''
+    chats: '',
+    timer: ''
   },
   created: function created() {
     var _this = this;
 
     var userId = $('meta[name="userId"]').attr('content');
     var friendId = $('meta[name="friendId"]').attr('content');
+    this.fetchChat();
+    this.timer = setInterval(this.fetchChat, 3000);
+    Echo["private"]('Chat.' + friendId + '.' + userId).listen('BroadcastChat', function (e) {
+      _this.chats.push(e.chat);
+    });
+  },
+  methods: {
+    fetchChat: function fetchChat() {
+      var _this2 = this;
 
-    if (friendId != undefined) {
-      axios.post('/chat/getChat/' + friendId).then(function (response) {
-        _this.chats = response.data;
-      });
-      Echo["private"]('Chat.' + friendId + '.' + userId).listen('BroadcastChat', function (e) {
-        _this.chats.push(e.chat);
-      });
+      var userId = $('meta[name="userId"]').attr('content');
+      var friendId = $('meta[name="friendId"]').attr('content');
+
+      if (friendId != undefined) {
+        axios.post('/chat/getChat/' + friendId).then(function (response) {
+          _this2.chats = response.data;
+        });
+      }
+    },
+    cancelAutoUpdate: function cancelAutoUpdate() {
+      clearInterval(this.timer);
     }
+  },
+  beforeDestroy: function beforeDestroy() {
+    clearInterval(this.timer);
   }
 });
+$(document).ready(function () {
+  setTimeout(function () {
+    $("div.alert-info").remove();
+  }, 3000); // 3 secs
+});
+/* var scrolled = false;
+function updateScroll(){
+    if(!scrolled){
+        var element = document.getElementById("chat-box");
+        element.scrollTop = element.scrollHeight;
+    }
+}
+
+$("chat-box").on('scroll', function(){
+    scrolled=true;
+}); */
 
 /***/ }),
 
