@@ -42,13 +42,16 @@ Route::group(['middleware' => ['auth']], function () {
     });
     //End logout
     //route dashboard
-	
+
     Route::get('/admin','AdminController@show_dashboard')->name('dashAdmin');
     Route::get('/add_category','CategoryController@index');
     Route::get('/all_categories','CategoryController@all_categories');
     Route::post('/save_categories','CategoryController@save_categories');
     Route::get('/in_active/{category_id}','CategoryController@in_active');
     Route::get('/active/{category_id}','CategoryController@active');
+    Route::get('/edit-category/{category_id}','CategoryController@edit_category');
+    Route::post('/update-category/{category_id}','CategoryController@update_category');
+    Route::get('/delete-category/{category_id}','CategoryController@delete_category');
     //end dashboard
 
 //for cars//
