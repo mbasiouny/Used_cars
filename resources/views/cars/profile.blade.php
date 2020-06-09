@@ -32,8 +32,8 @@
     <p style="text-align: center ;font-size: 25px">used from {{$myproduct->years}} years</p>
     <p style="font-size: 25px;text-align: center">{{$myproduct->description}}</p>
     <p style="font-size: 25px;text-align: center"><span style="color: orange">price:</span> {{$myproduct->price}}$</p>
-    <a href=""class="basi"title="clik here to update this car">update</a>
-    <a href=""class="bas"title="clik here to delete this car">Delete</a>
+    <a href="edit/{{$myproduct->id}}"class="basi"title="clik here to update this car">update</a>
+    <a href="profile/{{$myproduct->id}}"class="bas"title="clik here to delete this car">Delete</a>
 </div>
 </body>
 </html>

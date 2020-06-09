@@ -57,7 +57,10 @@ Route::group(['middleware' => ['auth']], function () {
 //for cars//
     Route::get('add','Cars_Controller@add_car');
     Route::post('add','Cars_Controller@add_car');
+    Route::get('edit/{id}','Cars_Controller@edit_car');
+   Route::post('edit/{id}','Cars_Controller@edit_car');
     Route::get('profile','Cars_Controller@user_profile');
+    Route::get('profile/{id}','Cars_Controller@delete_car');
 // cars//
 
 //chat
@@ -71,3 +74,4 @@ Route::get ('/chat/deleteChat/{id}' , 'ChatController@deleteChat')->middleware('
 //Route::post ('/chat/Seen/{chat}' , 'ChatController@Seen')->middleware('auth');
 
 });
+
